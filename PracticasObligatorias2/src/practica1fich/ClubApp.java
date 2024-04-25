@@ -5,7 +5,6 @@ import dialogos.Dialogos;
 
 public class ClubApp {
 public static void main(String[] args) {
-	System.out.println("oigshjv");
 	String [] opciones = {"Crear Socio", "Listar Socios", "Salir"};		
 	int opcion;
 	opcion=Dialogos.pedirOpcion("Que deseas hacer?", "App Socios", opciones);
