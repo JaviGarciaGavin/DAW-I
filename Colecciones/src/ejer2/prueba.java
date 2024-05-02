@@ -9,15 +9,17 @@ public static void main(String[] args) {
 	coches.add("Ford");
 	coches.add("Audi");
 	coches.add("Seat");
-	coches.add("Renault");
+	coches.add(4,"Renault");
 	
 for (int j = 0; j < coches.size(); j++) {
 	System.out.println("Coche "+(j+1)+" "+coches.get(j));
 }
 System.out.println("------------------------------------------------------------------------------------------------------------------");
-	coches.add(2,"BMW");
+	coches.add(0,"BMW");
 	for (int j = 0; j < coches.size(); j++) {
 		System.out.println("Coche "+(j+1)+" "+coches.get(j));
 	}
+
+
 	}
 }
