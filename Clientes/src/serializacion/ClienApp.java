@@ -13,10 +13,10 @@ import dialogos.Dialogos;
 public class ClienApp {
 
 	public static void main(String[] args) {
-		System.out.println("B");
+		System.out.println("Primera Version");
 		String [] opciones = {"Nuevo cliente", "Listar clientes", "Salir"};		
 		int opcion;
-		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaa");
+		
 		opcion=Dialogos.pedirOpcion("Elige acción", "ClienApp", opciones);
 		while (opcion!=2) {			
 			switch (opcion) {
