@@ -13,7 +13,7 @@ import dialogos.Dialogos;
 public class ClienApp {
 
 	public static void main(String[] args) {
-		System.out.println("Primera Version");
+		System.out.println("Segunda Version");
 		String [] opciones = {"Nuevo cliente", "Listar clientes", "Salir"};		
 		int opcion;
 		
