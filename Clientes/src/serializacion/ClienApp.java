@@ -15,6 +15,7 @@ public class ClienApp {
 	public static void main(String[] args) {
 		String [] opciones = {"Nuevo cliente", "Listar clientes", "Salir"};		
 		int opcion;
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAAA");
 		opcion=Dialogos.pedirOpcion("Elige acción", "ClienApp", opciones);
 		while (opcion!=2) {			
 			switch (opcion) {
