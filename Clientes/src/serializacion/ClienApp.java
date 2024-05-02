@@ -13,6 +13,7 @@ import dialogos.Dialogos;
 public class ClienApp {
 
 	public static void main(String[] args) {
+		System.out.println("B");
 		String [] opciones = {"Nuevo cliente", "Listar clientes", "Salir"};		
 		int opcion;
 		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaa");
