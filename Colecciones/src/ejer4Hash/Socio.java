@@ -50,14 +50,15 @@ public int compareTo(Object ob) {
 }
 
 @Override
-public int hashCode() {
-	// TODO Auto-generated method stub
-	return super.hashCode();
-}
-@Override
 public boolean equals(Object soc) {
 	boolean iguales;
 	Socio otroS=(Socio) soc;
+	if(this==soc) {
+		iguales=false;
+	}
+	if(soc==null) {
+		iguales=false;
+	}
 	if(this.id==otroS.id) {
 			iguales=true;
 	}else {
@@ -67,8 +68,13 @@ return iguales;
 }
 
 @Override
+public int hashCode() {
+	return (this.id);
+}
+
+@Override
 public String toString() {
-	return "\nSocio \nId=" + id + "\nName= " + name + "\nFechaNacimiento=" + fechaNacimiento+ "\n----------------------------------------------------------------------------------------------------------------------------";
+	return "\nSOCIO \nId=" + id + "   //Name= " + name + "   // FechaNacimiento=" + fechaNacimiento+ "\n----------------------------------------------------------------------------------------------------------------------------";
 }	
 }
 
