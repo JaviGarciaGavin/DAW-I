@@ -26,7 +26,7 @@ public class Academico implements Comparable,Serializable{
 	
 	@Override
 		public String toString() {
-			return "\nAcademico \nNombre=" + nombre + "\nAño de ingreso=" + aIngreso;
+			return "\nNombre=" + nombre + "\nAño de ingreso=" + aIngreso;
 		}
 
 	//Getters y Setters

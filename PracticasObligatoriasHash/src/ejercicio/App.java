@@ -6,6 +6,7 @@ import dialogos.Dialogos;
 
 
 public class App {
+@SuppressWarnings("unchecked")
 public static void main(String[] args) {
 	String seguir = "si", nombre = "";
 	String rellenar = "";
@@ -36,45 +37,31 @@ public static void main(String[] args) {
 	seguir=teclado.next();
 }
 	
-	
+	 //Listado ordenado por letra
+		Set<Map.Entry<Character, Academico>> conLetra = Academia.entrySet();
+		List<Map.Entry<Character, Academico>> listaConLetra= new ArrayList<>(conLetra);
+
+		 ComparaLetras cl=new ComparaLetras();          
+	     Collections.sort(listaConLetra,cl);
+	     System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
+	     System.out.println("\nOrden por letra: " + listaConLetra);
+	     
+	     System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
+
 	//Listado de academicos ordenados por nombre sin la letra
-	ArrayList<Academico> listaSinLetra=new ArrayList<>(Academia.values());
-    Collections.sort(listaSinLetra);
-    System.out.println("Por nombre sin letra: " + listaSinLetra);	
+	     ArrayList<Academico> listaSinLetra=new ArrayList<>(Academia.values());
+	     Collections.sort(listaSinLetra);
+	     System.out.println("\nPor nombre sin letra: " + listaSinLetra);	
+	     System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
 
-
-	
-//Listado ordenado por letra
-	Set<Map.Entry<Character, Academico>> conLetra = Academia.entrySet();
-	List<Map.Entry<Character, Academico>> listaConLetra= new ArrayList<>(conLetra);
-
-	 ComparaLetras cl=new ComparaLetras();          
-     Collections.sort(listaConLetra,cl);
-     System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
-     System.out.println("Orden por letra: " + listaConLetra);
-	
-	
-	System.out.println(Academia);
-
-
-
+  
 	//Listado ordenado por ingreso
-	Set<Map.Entry<Character, Academico>> porIngreso = Academia.entrySet();
-	List<Map.Entry<Character, Academico>> listaConLetra= new ArrayList<>(conLetra);
-
-	 ComparaLetras cl2=new ComparaIngreso();          
-   Collections.sort(listaConLetra,cl);
-   System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
-   System.out.println("Orden por letra: " + listaConLetra);
+	     ComparaIngreso cl2=new ComparaIngreso();
+	     Collections.sort(listaSinLetra,cl2);
+	     System.out.println("\nOrdenado por Ingreso: " + listaSinLetra);	
+	     System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
 	
-	
-	System.out.println(Academia);
-
-
-
-
-
-
+}
 
 static boolean nuevoAcademico(Map<Character, Academico> academia, Academico nuevo, Character letra) {
     boolean insertado = false;
