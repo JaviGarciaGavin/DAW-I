@@ -12,21 +12,22 @@ public static void main(String[] args) {
 	Scanner teclado=new Scanner(System.in);
 	int anyo;
 	boolean insertado;
-	Academico aux=new Academico();
+	Academico aux;
 	Map<Character, Academico> Academia=new HashMap<Character, Academico>();
 
 	while (seguir.toUpperCase().compareTo("SI")==0) {
 		
 		System.out.println("Nombre del academico");
 		nombre=teclado.next();
-		aux.setNombre(nombre);
+		//aux.setNombre(nombre);
 		System.out.println("Año de su ingreso");
 		anyo=teclado.nextInt();
-		aux.setaIngreso(anyo);
+	//	aux.setaIngreso(anyo);
 	
 		System.out.println("Letra de su sillon");
 		sillon=teclado.next().charAt(0);
 		
+		aux=new Academico(nombre,anyo);
 		Academia.put(sillon, aux);
 		
 		insertado=nuevoAcademico(Academia,aux,sillon);
