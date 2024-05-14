@@ -53,11 +53,9 @@ public static void main(String[] args) {
 	System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");	
 	System.out.println("Añadir un elemento nuevo al conjunto");
 	boolean altaS;
+	altaS=club.add(new Socio(5,"Bea","11-09-1999"));
+	System.out.println("Usuario creado :"+ altaS);
 	
 	
-	
-	
-	
-	
-	
+	System.out.println("FIN");
 }}
