@@ -17,6 +17,21 @@ public class Dialogos extends JOptionPane {
 			throw e;
 		}
 	}
+	public static int pedirEntero(String mensaje, String texto) throws Exception{
+		try {
+			String message = showInputDialog(mensaje);
+			int valor=Integer.parseInt(message);
+			return valor;
+		}
+		catch(NumberFormatException ex) {
+			mensajeError("Introdujo un tipo de dato no apropiado"," Aplicación externa");
+			throw ex;
+		}
+		catch(Exception e) {
+			mensajeError("ERROR"," Aplicación externa");
+			throw e;
+		}
+	}
 	public static float pedirFloat (String mensaje) {
 		try {
 			String message = showInputDialog(mensaje);
