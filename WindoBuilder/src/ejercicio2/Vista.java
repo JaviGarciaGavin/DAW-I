@@ -45,6 +45,8 @@ public class Vista extends JFrame {
 	public Vista() {
 		JPanel panel = new JPanel();
 		JButton btnNewButton = new JButton("Buscar");
+		btnNewButton.addActionListener(control);
+			
 		JLabel ResultadoLbl = new JLabel("Resultado");
 		
 		setTitle("Ejercicio2");
