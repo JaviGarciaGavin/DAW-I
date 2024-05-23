@@ -30,9 +30,7 @@ public class Vista extends JFrame {
 			public void run() {
 				try {
 					Vista frame = new Vista();
-					
 					frame.setVisible(true);
-					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
